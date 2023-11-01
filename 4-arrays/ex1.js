@@ -1,17 +1,36 @@
 const prompt = require('prompt-sync')();
 /*
-Crie um algoritmo que leia 8 números e exiba-os em ordem
-inversa (utilizar vetor)
-Exemplo de Entrada e Saída
-Entrada: 2 5 1 4 7 3 6 8
-Saída: 8 6 3 7 4 1 5 2
+Faça um programa que receba do usuário um vetor com 10
+posições. Em seguida deverá ser impresso o maior e o menor
+elemento (numero) do vetor.
 */
 
 let array = [];
+let maior, menor;
+for (let i = 0; i < 5; i++) {
+    array[i] = Number(prompt(`Insira o valor da ${i}º posição: `));
 
-for (let i = 0; i < 8; i++) {
-    array[i] = Number(prompt(`Valor da ${i}° posição: `));
+    if (i == 0){
+        //startando as variaveis para nao ficarem vazias
+        maior = array[i];
+        menor = array[i];
+        
+    } else{
+        if (array[i] > array[i-1]) {
+            //maior valor
+            maior = array[i];
+    
+        } else if (array[i] < array[i-1]) {
+            //menor valor
+            menor = array[i];
+        }
+    } 
 }
-for (let i = 7; i >= 0 ; i--){
-    console.log(array[i]);
-}
+/*
+let maior = Math.max(...array);
+let menor = Math.min(...array);
+*/
+
+console.log(array);
+console.log(`O maior valor é: ${maior}`)
+console.log(`O menor valor é: ${menor}`)
