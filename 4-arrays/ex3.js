@@ -1,13 +1,13 @@
 const prompt = require('prompt-sync')();
 /*
-Faça um programa que receba do usuário um vetor com 10
-posições. Em seguida deverá ser impresso o maior e o menor
-elemento (numero) do vetor.
+Fazer  um  programa  para  ler  10  valores  e,  em  seguida,  mostrar  a 
+posição onde se encontram o maior e o menor valor.
 */
 
 let array = [];
 let maior, menor, posMaior, posMenor;
-for (let i = 0; i < 5; i++) {
+
+for (let i = 0; i < 10; i++) {
     array[i] = Number(prompt(`Insira o valor da ${i}º posição: `));
 
     if (i == 0){
