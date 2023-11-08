@@ -15,15 +15,21 @@ let numerosDiferentes = [];
 
 for (let i = 0; i < 3; i++) {
     array[i] = Number(prompt(`Insira o valor da posição ${i}°: `));
-}
 
-numerosDiferentes
-for (let i = 0; i < 15; i++) {
-    
-    if(){
+    if (i == 0){
+        numerosDiferentes[i] = array[i];
 
+    } else{
+        if (array[i] != array[i-1]) {
+            console.log('achei um diferente, que é: ' + array[i]);
+            numerosDiferentes[i] = array[i];
+            
+        } else{
+            console.log('achei um igual, que é: '+ array[i]);
+
+        }
     }
-}
 
+}
 console.log(array);
 console.log(numerosDiferentes);
