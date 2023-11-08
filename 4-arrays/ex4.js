@@ -12,22 +12,21 @@ for (let i = 0; i < 15; i++) {
     notas[i] = Number(prompt(`Insira a nota do aluno da posição ${i}: `));
     mediaGeral+= notas[i];
 
-    if (i == 0){
-        //startando as variaveis para nao ficarem vazias
+    if (i == 0) {
         maiorNota = notas[i];
         menorNota = notas[i];
-        
+
     } else{
-        if (notas[i] > notas[i-1]) {
-            //maior valor
+        if(notas[i] > maiorNota){
             maiorNota = notas[i];
 
-        } else if (notas[i] < notas[i-1]) {
-            //menor valor
+        } else if(notas[i] < menorNota){
             menorNota = notas[i];
-
+            
         }
-    } 
+
+    }
+
 }
 mediaGeral= mediaGeral/15;
 
