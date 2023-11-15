@@ -5,10 +5,11 @@ e imprima a matriz final, conforme mostrado a seguir:
 */
 
 let matriz = [
-    [1, 2, 3]
-    [4, 5, 6]
+    [1, 2, 3],
+    [4, 5, 6],
     [7, 8, 9]
 ];
+
 
 for (let linha = 0; linha < matriz.length; linha++) {
     for (let coluna = 0; coluna < matriz[linha].length; coluna++) {
@@ -16,13 +17,26 @@ for (let linha = 0; linha < matriz.length; linha++) {
 
     }
 }
+
+
 let linha1 = matriz[0];
 let linha2 = matriz[1];
-let linha3 = matriz[2], reserva;
+let linha3 = matriz[2];
 
-//troca
-linha1 = reserva;
-linha1 = linha3;
+let matrizTrocada = [
+    linha3,
+    linha2,
+    linha1
+];
 
+let matrizFinal = matrizTrocada;
 
-console.log(matriz);
+for (let linha = 0; linha < matrizTrocada.length; linha++) {
+    matrizFinal[linha] = [
+        matrizTrocada[linha][2],
+        matrizTrocada[linha][1],
+        matrizTrocada[linha][0],
+    ];
+}
+
+console.table(matrizTrocada)
